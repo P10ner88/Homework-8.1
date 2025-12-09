@@ -14,13 +14,11 @@ def random_predict(number: int = 1) -> int:
 
     while check_number != number:
         count += 1
-        # print(check_number, end = '')
+        # реализуем по принципу метода бинарного поиска
         if check_number > number:
             max_value = check_number
             check_number = min_value + (max_value-min_value)//2
-            # print(' > ', number, ', new check_number = ',check_number)
         else:
-            # print(check_number, end = '')
             min_value = check_number
             check_number = min_value + (max_value-min_value)//2
     return count
